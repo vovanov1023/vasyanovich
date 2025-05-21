@@ -5,16 +5,19 @@
     <title>Title</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
+<!--Хотів би дізнатись як зробити обводку не використовуючи border, бо він якийсь контужений і чи можна зробити внутрішню обводку-->
+
 <body>
     <main>
-        <nav>
-            <a href="#" class="nav-button">Загальна інформація</a>
-            <a href="#" class="nav-button">Біографія</a>
-            <a href="#" class="nav-button">Фільмографія</a>
+        <nav class="nav">
+            <a href="#gen-info" class="nav-button">Загальна інформація</a>
+            <a href="#bio" class="nav-button">Біографія</a>
+            <a href="#filmography" class="nav-button">Фільмографія</a>
         </nav>
 
         <article class="article">
-            <header>
+            <header class="article-header">
                 22 серпня &bull; На основі <a href="#">статті з «Вікіпедії»</a>
             </header>
             <h1>Васянович Валентин</h1>
@@ -28,11 +31,13 @@
                     «Відблиск») Венеційського кінофестивалю. Лауреат Національної премії України імені Тараса
                     Шевченка (2019; кінострічка «Атлантида»)
                 </p>
-                <figure id="image">
-                    <img src="img/chuvik.png" alt="Валентин Миколайович Васянович">
-                    <figcaption>Валентин Васянович</figcaption>
-                </figure>
             </section>
+
+            <figure class="image">
+                <!--Я вбив годину свого часу, щоб зрозуміти звідки взялися 4 пікселі між img й figcaption які я ніде не вказував і які ніде не відображаються-->
+                <img style="display: block" src="img/chuvik.png" alt="Фото Валентина Миколайовича Васяновича">
+                <figcaption class="caption-text">Валентин Васянович</figcaption>
+            </figure>
 
             <section id="bio">
                 <h2>Біографія</h2>
@@ -63,18 +68,18 @@
 
             <section id="filmography">
                 <h2>Фільмографія</h2>
-                <ol>
-                    <li>2021 Відблиск</li>
-                    <li>2019 Атлантида</li>
-                    <li>2017 Згода</li>
-                    <li>2017 Рівень чорного</li>
-                    <li>2014 Плем'я</li>
-                    <li>2014 присмерк</li>
+                <ol class="film-list">
+                    <li class="list-item">1. 2021 Відблиск</li>
+                    <li class="list-item">2. 2019 Атлантида</li>
+                    <li class="list-item">3. 2017 Згода</li>
+                    <li class="list-item">4. 2017 Рівень чорного</li>
+                    <li class="list-item">5. 2014 Плем'я</li>
+                    <li class="list-item">6. 2014 присмерк</li>
                 </ol>
             </section>
         </article>
 
-        <footer>
+        <footer class="footer">
             <p>&copy; Зверстав Володимир Новицький</p>
         </footer>
     </main>
